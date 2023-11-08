@@ -1,4 +1,4 @@
-# Dark Tiktok App
+# Floripa Play App
 
 A new Flutter project.
 
