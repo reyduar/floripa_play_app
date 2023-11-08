@@ -5,12 +5,7 @@ import 'package:dark_tiktok_app/shared/data/local_video_posts.dart';
 
 class LocalVideoDatasourceImpl implements VideoPostDataSource {
   @override
-  Future<List<VideoPost>> getTrendingVideosByPage(int page) {
-    throw UnimplementedError();
-  }
-
-  @override
-  Future<List<VideoPost>> getTrendingVideosByUser(String userId) async {
+  Future<List<VideoPost>> getTrendingVideosByPage(int page) async {
     await Future.delayed(const Duration(seconds: 2));
 
     final List<VideoPost> newVideos = videoPosts
@@ -18,5 +13,10 @@ class LocalVideoDatasourceImpl implements VideoPostDataSource {
         .toList();
 
     return newVideos;
+  }
+
+  @override
+  Future<List<VideoPost>> getTrendingVideosByUser(String userId) async {
+    throw UnimplementedError();
   }
 }
